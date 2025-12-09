@@ -200,6 +200,9 @@ const StudentDashboard = () => {
                     </div>
                     <h3 className="text-base font-bold text-white mb-4 line-clamp-1">{course.title}</h3>
 
+                    <p className="text-xs text-indigo-400 font-bold mb-3">
+                      {Number(course.price) === 0 ? 'Acesso Gratuito' : `Valor: R$ ${Number(course.price).toFixed(2)}`}
+                    </p>
                     <div className="flex items-center justify-between pt-4 border-t border-white/5">
                       <div className="text-xs text-gray-500 flex items-center gap-1">
                         <Clock size={12} /> {course.modules.reduce((acc, mod) => acc + mod.lessons.length, 0)} aulas
